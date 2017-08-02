@@ -20,6 +20,14 @@ namespace uno
             return noob;
         }
 
+        public Player draw(Deck decky, int num)
+        {
+            for(int i = 0; i < num; i++){
+                this.draw(decky);
+            }
+            return this;
+        }
+
         //Give the Player a discard method which discards the Card at the specified index from the player's hand and returns this Card or null if the index does not exist.
         public Card discard(int idx)
         {

@@ -19,6 +19,9 @@ namespace uno
             ricki.draw(one);
             ricki.draw(one);
             ricki.draw(one);
+            Console.WriteLine(ricki.hand.Count);
+            ricki.draw(one, 10);
+            Console.WriteLine(ricki.hand.Count);
             ricki.draw(one);
             ricki.draw(one);
             Console.WriteLine(ricki.hand.Count);
