@@ -138,8 +138,14 @@ namespace uno
                 table1.discardPile.Add(cardtoremove);
                 if(currentPlayer.hand.Count == 0){
                     table1.tablestatus = false; 
-                    Console.WriteLine(currentPlayer.name + " has won! Game resetting -- we will soon keep score too!")
-                }       
+                    Console.WriteLine(currentPlayer.name + " has won! Game resetting -- we will soon keep score too!");
+                } else {
+                    if(currentPlayeridx == table1.currPlayers.Count - 1){
+                        currentPlayeridx = 0;
+                    } else {
+                        currentPlayeridx ++;
+                    }
+                }                       
              }        
         }
     }
