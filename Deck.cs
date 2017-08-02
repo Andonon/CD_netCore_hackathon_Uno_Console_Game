@@ -15,16 +15,27 @@ namespace uno
         public Deck reset()
         {
             cards = new List<Card>();
-            string[] suits = {"hearts","diamonds","spades","clubs"};
-            string[] strVals = {"Ace","two","three","four","five","six","seven","eight","nine","ten","Jack","Queen","King"};
+            
+            string[] wildVals = {"Wild","Wild","Wild","Wild","DrawFour","DrawFour","DrawFour","DrawFour"};
+            
+            string[] suits = {"Red","Blue","Green","Yellow"};
+            string[] strVals = {"Zero","One","One","Two","Two","Three","Three","Four","Four","Five","Five","Six","Six","Seven","Seven","Eight","Eight","Nine","Nine","DrawTwo","DrawTwo","Skip","Skip","Reverse","Reverse"};
+            int[] strScore = {0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,20,20,20,20,20,20};
             //for each suit, assemble set of cards.
             foreach(string suit in suits)
             {
-                //build out individual cards
+                //build out individual suit cards 
                 for(int i = 0; i < strVals.Length; i++){
-                    Card noob = new Card(strVals[i], suit, i+1);
+                    Card noob = new Card(strVals[i], suit, strScore[i]);
+
                     cards.Add(noob);
                 }
+                    //build out wild suit cards 
+            }
+            for(int i = 0; i < wildVals.Length; i++){
+                Card noob = new Card(wildVals[i], "wild", 50);
+
+                cards.Add(noob);
             }
             return this;
         }
