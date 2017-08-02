@@ -33,7 +33,7 @@ namespace uno
                     //build out wild suit cards 
             }
             for(int i = 0; i < wildVals.Length; i++){
-                Card noob = new Card(wildVals[i], "wild", 50);
+                Card noob = new Card(wildVals[i], "Wild", 50);
 
                 cards.Add(noob);
             }
@@ -64,7 +64,7 @@ namespace uno
             //return said card.
             return res;
             } else {
-                reset();
+                // reset();
                 return deal();
             }
         }
