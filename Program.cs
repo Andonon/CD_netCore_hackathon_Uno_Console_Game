@@ -6,7 +6,7 @@ namespace uno
     {
         static void Main(string[] args)
         {
-            Console.Clear();
+            // Console.Clear();
             Console.WriteLine("Welcome to Uno for console...");
             Console.Write("\nHow many players? (2-10): ");
             string playerprompt = Console.ReadLine();
@@ -18,8 +18,11 @@ namespace uno
 
             // Card jon = new Card("jon", "black", 1);
             // Console.WriteLine(jon.val);
-            // Deck bob = new Deck().reset();d
+            // Deck bob = new Deck();
             // Console.WriteLine(bob.cards.Count);
+            // for(int i = 0; i < bob.cards.Count; i++){
+            //         Console.WriteLine(bob.cards[i].strVal);
+            //                }
             // Deck one = new Deck();
             // Player ricki = new Player("Ricki");
             // Console.WriteLine(one.cards.Count);

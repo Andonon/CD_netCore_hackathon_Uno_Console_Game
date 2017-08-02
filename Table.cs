@@ -5,8 +5,8 @@ namespace uno
 {
     public class Table
     {
-        public List<Card> drawPile;
-        public List<Card> discardPile;
+        public Deck drawPile;
+        public Deck discardPile;
         public List<Player> currPlayers;
         public bool direction = true;
         public bool gamestatus = false;
@@ -14,11 +14,11 @@ namespace uno
 
         public Table(int numPlayers)
         {
-            Deck one = new Deck();
+            drawPile = new Deck();                    
             currPlayers = new List<Player>();
             
             for(int i = 1; i < numPlayers+1; i++){
-                Console.Clear();   
+                // Console.Clear();   
                 Console.Write("Enter the player "+i+" name: ");
                 string playerName = Console.ReadLine();
                 Player Name = new Player(playerName);
